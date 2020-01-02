@@ -67,13 +67,13 @@ cart
 end
 
 def checkout(cart, coupons)
-  consolidate_cart(cart)
-  apply_coupons(cart, coupons)
-  apply_clearance(cart)
+  cons_cart = consolidate_cart(cart)
+  couponed_cart = apply_coupons(cons_cart, coupons)
+  clear_cart = apply_clearance(couponed_cart)
   total = 0 
   index = 0 
-  while index < cart.length do
-    total += cart[index][:price]
+  while index < clear_cart.length do
+    total += clear_cart[index][:price]
     if total > 100
       total *= 0.90
       return total

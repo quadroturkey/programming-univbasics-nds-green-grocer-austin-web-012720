@@ -32,7 +32,7 @@ end
 def apply_coupons(cart, coupons)
   index = 0 
   while index < counpons.length do
-    cart_item = find_item_by_name_in_collection(coupons[counter][:item])
+    cart_item = find_item_by_name_in_collection(coupons[index][:item])
     counter += 1 
   end
 end

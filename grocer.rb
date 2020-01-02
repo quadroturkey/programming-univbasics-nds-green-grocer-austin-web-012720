@@ -80,5 +80,5 @@ def checkout(cart, coupons)
     end
     index += 1 
   end
-  total
+  total.round(2)
 end

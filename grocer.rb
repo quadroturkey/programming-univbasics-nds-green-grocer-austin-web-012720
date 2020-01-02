@@ -69,5 +69,14 @@ end
 def checkout(cart, coupons)
   consolidate_cart(cart)
   apply_coupons(cart, coupons)
- binding.pry
+  total = 0 
+  index = 0 
+  while index < cart.length do
+    total += cart[index][:price]
+    if total > 100
+      total *= .90
+      return total
+    end
+  end
+  total
 end

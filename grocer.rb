@@ -63,7 +63,7 @@ def apply_clearance(cart)
     end
     index += 1 
   end
-  cart
+ # cart
  # binding.pry
 end
 

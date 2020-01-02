@@ -77,6 +77,7 @@ def checkout(cart, coupons)
       total *= .90
       return total
     end
+    index += 1 
   end
   total
 end

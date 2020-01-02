@@ -75,8 +75,8 @@ def checkout(cart, coupons)
   while index < clear_cart.length do
     total += clear_cart[index][:price] * clear_cart[index][:count]
     if total > 100
-      total *= 0.90
-      return total.round
+      total *= 0.90.round(2)
+      return total
     end
     index += 1 
   end
